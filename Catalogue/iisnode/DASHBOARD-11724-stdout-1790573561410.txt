@@ -1,0 +1,4 @@
+[dotenv@17.3.1] injecting env (4) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Server running on port \\.\pipe\d3112623-c5fa-480a-a4f5-43d0e9485b45
+http://localhost:\\.\pipe\d3112623-c5fa-480a-a4f5-43d0e9485b45
+✅ SQL Connected

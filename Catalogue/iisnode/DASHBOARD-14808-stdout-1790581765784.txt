@@ -1,0 +1,4 @@
+[dotenv@17.3.1] injecting env (4) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Server running on port \\.\pipe\39656376-051c-41e0-88a5-5ac3d2cbaa26
+http://localhost:\\.\pipe\39656376-051c-41e0-88a5-5ac3d2cbaa26
+✅ SQL Connected

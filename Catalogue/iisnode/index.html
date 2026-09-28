@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"DASHBOARD-11212-stderr-1790586907205.txt","computername":"DASHBOARD","pid":11212,"type":"stderr","created":1790586907205},{"file":"DASHBOARD-11212-stdout-1790586907203.txt","computername":"DASHBOARD","pid":11212,"type":"stdout","created":1790586907203},{"file":"DASHBOARD-11724-stderr-1790573561413.txt","computername":"DASHBOARD","pid":11724,"type":"stderr","created":1790573561413},{"file":"DASHBOARD-11724-stdout-1790573561410.txt","computername":"DASHBOARD","pid":11724,"type":"stdout","created":1790573561410},{"file":"DASHBOARD-11796-stderr-1790571439771.txt","computername":"DASHBOARD","pid":11796,"type":"stderr","created":1790571439771},{"file":"DASHBOARD-11796-stdout-1790571439768.txt","computername":"DASHBOARD","pid":11796,"type":"stdout","created":1790571439768},{"file":"DASHBOARD-13808-stderr-1790570069554.txt","computername":"DASHBOARD","pid":13808,"type":"stderr","created":1790570069554},{"file":"DASHBOARD-13808-stdout-1790570069551.txt","computername":"DASHBOARD","pid":13808,"type":"stdout","created":1790570069551},{"file":"DASHBOARD-14616-stderr-1790551184079.txt","computername":"DASHBOARD","pid":14616,"type":"stderr","created":1790551184079},{"file":"DASHBOARD-14616-stdout-1790551184076.txt","computername":"DASHBOARD","pid":14616,"type":"stdout","created":1790551184076},{"file":"DASHBOARD-14808-stderr-1790581765787.txt","computername":"DASHBOARD","pid":14808,"type":"stderr","created":1790581765787},{"file":"DASHBOARD-14808-stdout-1790581765784.txt","computername":"DASHBOARD","pid":14808,"type":"stdout","created":1790581765784},{"file":"DASHBOARD-14836-stderr-1790539312293.txt","computername":"DASHBOARD","pid":14836,"type":"stderr","created":1790539312293},{"file":"DASHBOARD-14836-stdout-1790539312290.txt","computername":"DASHBOARD","pid":14836,"type":"stdout","created":1790539312290},{"file":"DASHBOARD-4824-stderr-1790554821613.txt","computername":"DASHBOARD","pid":4824,"type":"stderr","created":1790554821613},{"file":"DASHBOARD-4824-stdout-1790554821610.txt","computername":"DASHBOARD","pid":4824,"type":"stdout","created":1790554821610},{"file":"DASHBOARD-6288-stderr-1790548979672.txt","computername":"DASHBOARD","pid":6288,"type":"stderr","created":1790548979672},{"file":"DASHBOARD-6288-stdout-1790548979669.txt","computername":"DASHBOARD","pid":6288,"type":"stdout","created":1790548979669},{"file":"DASHBOARD-6704-stderr-1790579533821.txt","computername":"DASHBOARD","pid":6704,"type":"stderr","created":1790579533821},{"file":"DASHBOARD-6704-stdout-1790579533818.txt","computername":"DASHBOARD","pid":6704,"type":"stdout","created":1790579533818},{"file":"DASHBOARD-9840-stderr-1790558362268.txt","computername":"DASHBOARD","pid":9840,"type":"stderr","created":1790558362268},{"file":"DASHBOARD-9840-stdout-1790558362265.txt","computername":"DASHBOARD","pid":9840,"type":"stdout","created":1790558362265}];
+        var lastUpdated = 1790586908020;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>

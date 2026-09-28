@@ -1,0 +1,4 @@
+[dotenv@17.3.1] injecting env (4) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Server running on port \\.\pipe\920fa9dd-dab6-42f8-abee-5d357e33eac8
+http://localhost:\\.\pipe\920fa9dd-dab6-42f8-abee-5d357e33eac8
+✅ SQL Connected

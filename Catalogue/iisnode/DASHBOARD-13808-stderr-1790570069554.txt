@@ -1,0 +1,3 @@
+(node:13808) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+⚠️ Search index ensure skipped (continuing): The operation failed because an index or statistics with name 'IX_TH_NetWt' already exists on table 'POTJ2526.dbo.TagHistory'.

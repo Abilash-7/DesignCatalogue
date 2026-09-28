@@ -1,0 +1,4 @@
+[dotenv@17.3.1] injecting env (4) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Server running on port \\.\pipe\e72b9cef-9d53-41a6-bf07-ecfc4a41f177
+http://localhost:\\.\pipe\e72b9cef-9d53-41a6-bf07-ecfc4a41f177
+✅ SQL Connected

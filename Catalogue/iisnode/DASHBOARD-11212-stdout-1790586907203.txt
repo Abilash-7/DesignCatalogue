@@ -1,0 +1,9 @@
+[dotenv@17.3.1] injecting env (4) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Server running on port \\.\pipe\0e78167e-a7cf-4e08-9f12-42531f096e6b
+http://localhost:\\.\pipe\0e78167e-a7cf-4e08-9f12-42531f096e6b
+✅ SQL Connected
+Im here Orders
+Im here Orders
+Im here Orders
+Im here Orders
+Im here Orders
